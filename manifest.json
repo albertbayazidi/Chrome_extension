@@ -1,0 +1,15 @@
+{
+"content_scripts": 
+[{
+    "matches": ["https://www.youtube.com/*"],
+    "all_frames" : true,
+    "js": ["remove_html.js"],
+    "run_at": "document_start"
+}],
+
+  "manifest_version": 3,
+  "name": "No more shorts",
+  "version": "0.0.0.5",
+  "description": "Removes shorts and shorts section from your youtube feed. No more distractions/doom scrooling.",
+  "icons": {"128": "img.png"} 
+}
