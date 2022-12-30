@@ -5,6 +5,13 @@ function removeElem(classnam,elem,name) {
         }
     }
 }
+function remove_parent(classnam,elem,name) {
+    if (elem.className == classnam) {
+        if (elem.innerText == name) {
+            elem.parentNode.remove();
+        }
+    }
+}
 function remvoeSection(classnam,elem) {
     if (elem.className == classnam) {
         elem.remove();
@@ -40,6 +47,7 @@ function toolbar(classnam,elem,count,limit){
 
 counter_1 = 0
 counter_2 = 0
+counter_3 = 0
 const onMutation = (mutations) => {
   mo.disconnect();
   for (const { addedNodes } of mutations) {
@@ -50,7 +58,8 @@ const onMutation = (mutations) => {
         removethumbnail("style-scope ytd-thumbnail-overlay-time-status-renderer",node);
         counter_1 = removebaner("tab-content style-scope tp-yt-paper-tab",node,counter_1,3);
         counter_2 = toolbar("style-scope ytd-guide-entry-renderer",node,counter_2,5);
-        }
+        remove_parent("style-scope ytd-reel-shelf-renderer",node,"Shorts");
+      }
     }
   }
   observe();

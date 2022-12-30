@@ -9,7 +9,7 @@
 
   "manifest_version": 3,
   "name": "No more shorts",
-  "version": "0.0.0.5",
+  "version": "0.0.0.6",
   "description": "Removes shorts and shorts section from your youtube feed. No more distractions/doom scrooling.",
   "icons": {"128": "img.png"} 
 }
